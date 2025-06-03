@@ -9,7 +9,7 @@ fs.readFile("database/use.json", "utf8", (err, data) => {
   if(err) {
     console.log("ERROR:", err);
   } else {
-    user = JSON.parse(data)
+    user = JSON.parse(data);
   }
 });
 
@@ -37,7 +37,7 @@ console.log(req.body);
 res.json({test: "success"});
 });
 
-app.get('/author',(req, res) => {
+app.get("/author",(req, res) => {
   res.render("author", {user: user});
 });
 

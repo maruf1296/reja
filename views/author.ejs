@@ -1,1 +1,178 @@
-<div>marufjon</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!============================ CSS.LINK  ===============================>
+    <link rel="stylesheet" href="/main.css" />
+    <!============================ FOTN-AWESOME  ===============================>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!============================== BOOTSTRAP  =================================>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"
+    ></script>
+    <title>Portfolio</title>
+  </head>
+
+  <body>
+    <div class="frame">
+      <div class="main_frame">
+        <div class="left_frame">
+          <div class="profile">
+            <div class="profile_1">
+              <div class="img">
+                <img src="images/profile.png" alt="" />
+              </div>
+              <div class="name"><%= user.name %></div>
+              <div class="profession"><%= user.profession %></div>
+            </div>
+            <div class="icons">
+              <div class="icons_d"><img src="icon/Facebook.svg" alt="" /></div>
+              <div class="icons_f"><img src="icon/Instagram.svg" alt="" /></div>
+              <div class="icons_i"><img src="icon/Twitter.svg" alt="" /></div>
+              <div class="icons_l"><img src="icon/Linkeding.svg" alt="" /></div>
+              <div class="icons_t"><img src="icon/Youtube.svg" alt="" /></div>
+              <div class="icons_y"><img src="icon/Dribbble.svg" alt="" /></div>
+            </div>
+            <div class="border"></div>
+            <div class="about">
+              <div class="info_box">
+                <span class="label">Age:</span>
+                <span class="values"><%=user.age%></span>
+              </div>
+              <div class="info_box">
+                <span class="label">Residence:</span>
+                <span class="values"><%=user.residence%></span>
+              </div>
+              <div class="info_box">
+                <span class="label">Freelance:</span>
+                <span class="values" style="color: #7eb942"> Available</span>
+              </div>
+              <div class="info_box">
+                <span class="label">Address:</span>
+                <span class="values"><%=user.adress%></span>
+              </div>
+            </div>
+            <div class="languages">
+              <h1>Languages</h1>
+              <div class="lang_box">
+                <span class="lang"
+                  ><%= user.languages.find(lang => lang === "Uzbek") %></span
+                >
+                <span class="values">100%</span>
+              </div>
+              <div><img src="icon/uzb Line.svg" alt="" /></div>
+              <div class="lang_box">
+                <span class="lang"
+                  ><%= user.languages.find(lang => lang === "Korean") %></span
+                >
+                <span class="values">80%</span>
+              </div>
+              <div><img src="icon/koLine.svg" alt="" /></div>
+              <div class="lang_box">
+                <span class="lang"
+                  ><%= user.languages.find(lang => lang === "English") %></span
+                >
+                <span class="values">60%</span>
+              </div>
+              <div><img src="icon/engLine.svg" alt="" /></div>
+            </div>
+            <div class="skills">
+              <h1>Skills</h1>
+              <div class="lang_box">
+                <span class="lang"><%=user.skills[0]%></span>
+                <span class="values">90%</span>
+              </div>
+              <div><img src="icon/htmlLine.svg" alt="" /></div>
+              <div class="lang_box">
+                <span class="lang"><%=user.skills[1]%></span>
+                <span class="values">85%</span>
+              </div>
+              <div><img src="icon/cssLine.svg" alt="" /></div>
+              <div class="lang_box">
+                <span class="lang"><%=user.skills[2]%></span>
+                <span class="values">80%</span>
+              </div>
+              <div><img src="icon/jsLine.svg" alt="" /></div>
+              <div class="lang_box">
+                <span class="lang"><%=user.skills[3]%></span>
+                <span class="values">75%</span>
+              </div>
+              <div><img src="icon/phpLine.svg" alt="" /></div>
+              <div class="lang_box">
+                <span class="lang"><%=user.skills[4]%></span>
+                <span class="values">85%</span>
+              </div>
+              <div><img src="icon/wordLine.svg" alt="" /></div>
+            </div>
+            <div class="extra_skills">
+              <h1>Extra Skills</h1>
+              <div class="extra_box">
+                <div class="icon">
+                  <img src="icon/Icons.svg" alt="" />
+                  <span><%=user.extra_skills[0]%>,</span>
+                  <span><%=user.extra_skills[1]%></span>
+                </div>
+                <div class="icon">
+                  <img src="icon/Icons.svg" alt="" />
+                  <span><%=user.extra_skills[0]%>,</span>
+                  <span><%=user.extra_skills[2]%></span>
+                </div>
+                <div class="icon">
+                  <img src="icon/Icons.svg" alt="" />
+                  <span><%=user.extra_skills[0]%>,</span>
+                  <span><%=user.extra_skills[3]%></span>
+                </div>
+                <div class="icon">
+                  <img src="icon/Icons.svg" alt="" />
+                  <span><%=user.extra_skills[0]%>,</span>
+                  <span><%=user.extra_skills[4]%></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="midd_frame">
+          <div class="midd_frame_top">
+            <div class="title">
+              <h1><%=user.service_desc%></h1>
+              <p><%=user.about_me%></p>
+              <button>HIRE ME <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <img src="images/Your Image 1.png" alt="" />
+          </div>
+          <div class="midd_frame_niz">
+            <div class="my_services">
+              <h1>My services</h1>
+              <p>
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim velit mollit. lorem
+                ipsum
+              </p>
+            </div>
+            <div class="rectangle">
+              <div class="rectangle_box">
+                <div class="icon">
+                  <img src="icon/coding.svg" alt="" />
+                </div>
+                <div class="ti">
+                  <span class="web">Web Development</span>
+                  <span class="blog">Blog, E-commerce</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right_frame"></div>
+      </div>
+    </div>
+  </body>
+</html>

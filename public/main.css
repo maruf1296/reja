@@ -1,0 +1,428 @@
+.frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background: #e5e5e5;
+}
+
+.frame .main_frame {
+  width: 1440px;
+  height: 1312px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 2px;
+}
+/* =============== LEFT_FRAME ============== */
+.frame .main_frame .left_frame {
+  width: 305px;
+  height: 1315px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+}
+
+.frame .main_frame .left_frame .profile {
+  margin-top: 47px;
+  margin-left: 47px;
+  margin-right: 30px;
+  width: 228px;
+  height: 253px;
+  display: flex;
+  flex-direction: column;
+
+  padding-bottom: 53px;
+  width: 220px;
+  border-bottom: 2px solid rgb(240, 240, 246);
+}
+
+.frame .main_frame .left_frame .profile .profile_1 {
+  width: 228px;
+  height: 253px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.frame .main_frame .left_frame .profile .profile_1 .img {
+  margin-bottom: 27px;
+  width: 156px;
+  height: 135px;
+}
+
+.frame .main_frame .left_frame .profile .profile_1 .name {
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+
+  color: rgb(43, 43, 43);
+}
+
+.frame .main_frame .left_frame .profile .profile_1 .profession {
+  margin-top: 7px;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+
+  color: rgb(118, 118, 118);
+}
+
+.frame .main_frame .left_frame .profile .icons {
+  margin-top: 18px;
+  width: 228px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.frame .main_frame .left_frame .profile .border {
+  margin-top: 53px;
+}
+
+.frame .main_frame .left_frame .profile .about {
+  margin-top: 25px;
+  width: 221px;
+  height: 126px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 24px;
+  width: 220px;
+  border-bottom: 2px solid rgb(240, 240, 246);
+}
+
+.frame .main_frame .left_frame .profile .about .info_box {
+  padding-bottom: 10px;
+  width: 221px;
+  height: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.frame .main_frame .left_frame .profile .about .info_box .label {
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: capitalize;
+
+  background-color: #ffb400;
+  color: rgb(43, 43, 43);
+}
+
+.frame .main_frame .left_frame .profile .about .info_box .values {
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+
+  color: rgb(43, 43, 43);
+}
+
+.frame .main_frame .left_frame .profile .languages {
+  margin-top: 26px;
+  width: 220px;
+  height: 153px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 25px;
+  border-bottom: 2px solid rgb(240, 240, 246);
+}
+
+.frame .main_frame .left_frame .profile .languages h1 {
+  margin-bottom: 20px;
+  color: rgb(43, 43, 43);
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.frame .main_frame .left_frame .profile .languages .lang_box {
+  width: 220px;
+  height: 27px;
+  display: flex;
+  justify-content: space-between;
+
+  color: rgb(118, 118, 118);
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+
+  color: rgb(118, 118, 118);
+}
+
+.frame .main_frame .left_frame .profile .skills {
+  margin-top: 15px;
+  width: 220px;
+  height: 153px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 90px;
+
+  border-bottom: 2px solid rgb(240, 240, 246);
+}
+
+.frame .main_frame .left_frame .profile .skills h1 {
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+
+  color: rgb(43, 43, 43);
+}
+
+.frame .main_frame .left_frame .profile .skills .lang_box {
+  width: 220px;
+  height: 27px;
+  display: flex;
+  justify-content: space-between;
+
+  color: rgb(118, 118, 118);
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+
+  color: rgb(118, 118, 118);
+}
+
+.frame .main_frame .left_frame .profile .extra_skills {
+  margin-top: 25px;
+  width: 186px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.frame .main_frame .left_frame .profile .extra_skills h1 {
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+
+  color: rgb(43, 43, 43);
+}
+
+.frame .main_frame .left_frame .profile .extra_skills .extra_box {
+  width: 200px;
+  height: 24px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.frame .main_frame .left_frame .profile .extra_skills .extra_box .icon {
+  display: flex;
+  margin-bottom: 10px;
+
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+
+  color: rgb(118, 118, 118);
+}
+
+.frame .main_frame .left_frame .profile .extra_skills .extra_box .icon img {
+  margin-right: 10px;
+}
+
+/* =================== MIDD_FRAME ================ */
+.frame .main_frame .midd_frame {
+  width: 970px;
+  height: 1256px;
+  display: flex;
+  flex-direction: column;
+}
+
+.frame .main_frame .midd_frame .midd_frame_top {
+  margin-left: 34px;
+  width: 960px;
+  height: 454px;
+  display: flex;
+
+  background: white;
+}
+
+.frame .main_frame .midd_frame .midd_frame_top .title {
+  padding-left: 56px;
+  width: 550px;
+  height: 454px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.frame .main_frame .midd_frame .midd_frame_top .title h1 {
+  font-family: sans-serif;
+  font-size: 35px;
+  font-weight: 700px;
+  line-height: 123.6%;
+  letter-spacing: 0%;
+  text-align: left;
+
+  color: rgb(43, 43, 43);
+}
+
+.frame .main_frame .midd_frame .midd_frame_top .title p {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+
+  color: rgb(118, 118, 118);
+}
+
+.frame .main_frame .midd_frame .midd_frame_top .title button {
+  margin-top: 24px;
+  width: 154px;
+  height: 51px;
+
+  border-radius: 5px;
+  background: rgb(255, 180, 0);
+  border: none;
+}
+
+.frame .main_frame .midd_frame .midd_frame_top img {
+  width: 326px;
+  height: 446px;
+}
+
+.frame .main_frame .midd_frame .midd_frame_niz {
+  margin-left: 34px;
+  margin-top: 148px;
+  width: 960px;
+  height: 653px;
+
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+
+  background: #e5e5e5;
+}
+
+.frame .main_frame .midd_frame .midd_frame_niz .my_services {
+  width: 438px;
+  height: 160px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.frame .main_frame .midd_frame .midd_frame_niz .my_services h1 {
+  font-family: sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 123.6%;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+
+  color: rgb(43, 43, 43);
+}
+
+.frame .main_frame .midd_frame .midd_frame_niz .my_services p {
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: capitalize;
+
+  color: rgb(118, 118, 118);
+}
+
+.frame .main_frame .midd_frame .midd_frame_niz .rectangle {
+  margin-top: 50px;
+  width: 966px;
+  height: 480px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.frame .main_frame .midd_frame .midd_frame_niz .rectangle .rectangle_box {
+  width: 310px;
+  height: 225px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: rgb(255, 255, 255);
+}
+
+.frame .main_frame .midd_frame .midd_frame_niz .rectangle .rectangle_box .icon {
+  margin-top: 30px;
+  width: auto;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.frame .main_frame .midd_frame .midd_frame_niz .rectangle .rectangle_box .ti {
+  width: 158px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.frame
+  .main_frame
+  .midd_frame
+  .midd_frame_niz
+  .rectangle
+  .rectangle_box
+  .ti
+  .web {
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 600px;
+  line-height: 153.6%;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+
+  color: rgb(43, 43, 43);
+}
+
+.frame
+  .main_frame
+  .midd_frame
+  .midd_frame_niz
+  .rectangle
+  .rectangle_box
+  .ti
+  .blog {
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: capitalize;
+
+  color: rgb(118, 118, 118);
+}
+
+.frame
+  .main_frame
+  .midd_frame
+  .midd_frame_niz
+  .rectangle
+  .rectangle_box
+  .ti
+  span {
+  margin-top: 15px;
+}
