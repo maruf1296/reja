@@ -5,7 +5,7 @@ const fs = require("fs");
 
 let user;
 fs.readFile("database/use.json", "utf8", (err, data) => {
-  if(err) {
+  if (err) {
     console.log("ERROR:", err);
   } else {
     user = JSON.parse(data);
@@ -27,24 +27,41 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 //4: Routing kodlar
-// app.get("/hello", function (req, res) {
-//   res.end(`<h1 style="background: yellow">HELLO WORLD by Maruf</h1>`);
-// });
 
-// app.get("/gift", function (req, res) {
-//   res.end(`<h1>Siz sovgalar sahifasidasiz</h1>`);
-// });
 app.post("/create-item", (req, res) => {
-console.log(req.body);
-res.json({test: "success"});
+  console.log('user entered /create-item');
+  const new_reja = req.body.reja;
+  db.collection("plans").insertOne({ reja: new_reja }, (err, date) => {
+    if (err) {
+      console.log(err);
+      res.end("something went wrong");
+    } else {
+      res.end("successfully added");
+    }
+  });
 });
 
-app.get("/author",(req, res) => {
-  res.render("author", {user: user});
+app.post("/create-item", (req, res) => {
+  console.log(req.body);
+  res.json({ test: "success" });
 });
 
-app.get("/", function(req, res) {
-res.render("reja");
+app.get("/author", (req, res) => {
+  res.render("author", { user: user });
+});
+
+app.get("/", function (req, res) {
+  console.log('user entered /');
+  db.collection("plans")
+    .find()
+    .toArray((err, data) => {
+      if (err) {
+        console.log(err);
+        res.end("somthing went wrong");
+      } else {
+        res.render("reja", {items: data});
+      }
+    });
 });
 
 module.exports = app;
