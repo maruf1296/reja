@@ -1,12 +1,29 @@
 console.log("train task ishga tushdi!");
 
 //TASK-A
-function bambboo(e, element) {
-  let javob = element.split("");
-  let javob1 = javob.filter((q) => q === e);
-  console.log(`${element} ning ichida ${javob1.length} ta ${e} bor`);
+// function bambboo(e, element) {
+//   let javob = element.split("");
+//   let javob1 = javob.filter((q) => q === e);
+//   console.log(`${element} ning ichida ${javob1.length} ta ${e} bor`);
+// }
+// bambboo("b", "bambboo");
+
+//=====================================================
+
+//TASK-B
+function stex(bob) {
+  console.log(typeof bob);
+  const result = bob.split("");
+  console.log(typeof result);
+  const lastResult = result.filter((ele) => {
+    return ele >= 0 ? ele: null;
+  });
+  console.log(lastResult);
 }
-bambboo("b", "bambboo");
+
+stex("ad2a54y79wet0sfgb9");
+
+
 // // =================================================
 // console.log("Jck Ma maslahatlari");
 // const list = [
@@ -91,23 +108,23 @@ bambboo("b", "bambboo");
 // }
 // run();
 
-console.log("===== PRACTICE =====");
+// console.log("===== PRACTICE =====");
 
-// DEFINE
-function qoldiqliBolish(a, b, callback) {
-  if (b === 0) {
-    callback("Mahraj nolga teng emas", null);
-  } else {
-    callback(null, a % b);
-  }
-}
+// // DEFINE
+// function qoldiqliBolish(a, b, callback) {
+//   if (b === 0) {
+//     callback("Mahraj nolga teng emas", null);
+//   } else {
+//     callback(null, a % b);
+//   }
+// }
 
-// CALL
-qoldiqliBolish(10, 2, (err, data) => {
-  if (err) console.log("Error:", err);
-  else {
-    console.log("data:", data);
-  }
-});
+// // CALL
+// qoldiqliBolish(10, 2, (err, data) => {
+//   if (err) console.log("Error:", err);
+//   else {
+//     console.log("data:", data);
+//   }
+// });
 
--
+// -
