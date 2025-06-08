@@ -1,4 +1,12 @@
 console.log("train task ishga tushdi!");
+
+//TASK-A
+function bambboo(e, element) {
+  let javob = element.split("");
+  let javob1 = javob.filter((q) => q === e);
+  console.log(`${element} ning ichida ${javob1.length} ta ${e} bor`);
+}
+bambboo("b", "bambboo");
 // // =================================================
 // console.log("Jck Ma maslahatlari");
 // const list = [
@@ -83,11 +91,23 @@ console.log("train task ishga tushdi!");
 // }
 // run();
 
+console.log("===== PRACTICE =====");
 
-function bambboo(e, element) {
-  let javob = element.split("");
-  let javob1 = javob.filter((q) => q === e);
-  console.log(`${element} ning ichida ${javob1.length} ta ${e} bor`);
+// DEFINE
+function qoldiqliBolish(a, b, callback) {
+  if (b === 0) {
+    callback("Mahraj nolga teng emas", null);
+  } else {
+    callback(null, a % b);
+  }
 }
 
-bambboo("b", "bambboo");
+// CALL
+qoldiqliBolish(10, 2, (err, data) => {
+  if (err) console.log("Error:", err);
+  else {
+    console.log("data:", data);
+  }
+});
+
+-
