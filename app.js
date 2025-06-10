@@ -29,7 +29,7 @@ app.set("view engine", "ejs");
 //4: Routing kodlar
 
 app.post("/create-item", (req, res) => {
-  console.log('user entered /create-item');
+  console.log("user entered /create-item");
   const new_reja = req.body.reja;
   db.collection("plans").insertOne({ reja: new_reja }, (err, date) => {
     if (err) {
@@ -51,7 +51,7 @@ app.get("/author", (req, res) => {
 });
 
 app.get("/", function (req, res) {
-  console.log('user entered /');
+  console.log("user entered /");
   db.collection("plans")
     .find()
     .toArray((err, data) => {
@@ -59,7 +59,7 @@ app.get("/", function (req, res) {
         console.log(err);
         res.end("somthing went wrong");
       } else {
-        res.render("reja", {items: data});
+        res.render("reja", { items: data });
       }
     });
 });
