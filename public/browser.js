@@ -19,7 +19,7 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
     .post("/create-item", { reja: createField.value })
     .then((response) => {
       document
-        .getElementById("items - list")
+        .getElementById("items-list")
         .insertAdjacentHTML("beforeend", itemTemplate(response.data));
       createField.value = "";
       createField.focus();
