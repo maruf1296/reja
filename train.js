@@ -1,7 +1,6 @@
 console.log("train task ishga tushdi!");
 
 // TASK-C
-/*       TASK c      */
 const moment = require("moment");
 
 class Shop {
