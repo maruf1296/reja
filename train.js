@@ -1,5 +1,47 @@
 console.log("train task ishga tushdi!");
 
+// TASK-C
+/*       TASK c      */
+const moment = require("moment");
+
+class Shop {
+  constructor(non, lagmon, cola) {
+    this.tovarlar = { non, lagmon, cola };
+  }
+
+  getTime() {
+    return moment().format("HH:mm");
+  }
+
+  qoldiq() {
+    const { non, lagmon, cola } = this.tovarlar;
+    console.log(`Hozir ${this.getTime()}da ${non}ta non, ${lagmon}ta lag'mon, ${cola}ta cola bor`);
+  }
+
+  sotish(nomi, soni) {
+    const bor = this.tovarlar[nomi];
+    if (bor == undefined)
+      return console.log(`Hozirda ${nomi} degan mahsulot yo'q.`);
+    if (bor < soni)
+      return console.log(`Hozirda yetarli ${nomi} yo'q. Faqat ${bor}ta bor.`);
+    this.tovarlar[nomi] -= soni;
+    console.log( `${soni}ta ${nomi} sotildi.`);
+  }
+
+  qabul(nomi, soni) {
+    if (this.tovarlar[nomi] == undefined)
+      return console.log(`Hozi:  ${nomi} degan mahsulot yo'q.`);
+    this.tovarlar[nomi] += soni;
+    console.log(`Yana ${soni}ta ${nomi} qabul qilindi.`);
+  }
+}
+const shop = new Shop(10, 5, 8);
+shop.qoldiq();
+shop.sotish("non", 8);
+shop.sotish("non", 4);
+
+shop.qoldiq();
+
 //TASK-A
 // function bambboo(e, element) {
 //   let javob = element.split("");
@@ -11,17 +53,17 @@ console.log("train task ishga tushdi!");
 //=====================================================
 
 //TASK-B
-function stex(bob) {
-  console.log(typeof bob);
-  const result = bob.split("");
-  console.log(typeof result);
-  const lastResult = result.filter((ele) => {
-    return ele >= 0 ? ele: null;
-  });
-  console.log(lastResult);
-}
+// function stex(bob) {
+//   console.log(typeof bob);
+//   const result = bob.split("");
+//   console.log(typeof result);
+//   const lastResult = result.filter((ele) => {
+//     return ele >= 0 ? ele: null;
+//   });
+//   console.log(lastResult);
+// }
 
-stex("ad2a54y79wet0sfgb9");
+// stex("ad2a54y79wet0sfgb9");
 
 
 // // =================================================
