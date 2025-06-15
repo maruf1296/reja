@@ -8,7 +8,7 @@ function checkContent(stax1, stax2) {
     let xats2 = stax2.split("").sort().join("");
     console.log(xats1 === xats2); 
 }
-    checkContent("mitgroup", "mitgroup");  
+    checkContent("mitgroup", "mitgropu");  
 
 
 // Ikkita parametra ega function tuzing, va functioning
