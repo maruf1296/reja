@@ -1,3 +1,5 @@
+// const { response } = require("../app");
+
 console.log("FrontEnd JS ishga tushdi");
 
 function itemTemplate(item) {
@@ -13,8 +15,19 @@ function itemTemplate(item) {
 let createField = document.getElementById("create-field");
 
 document.getElementById("create-form").addEventListener("submit", function (e) {
+  //STOP: Traditional API
   e.preventDefault();
 
+  //REST API ishga tushiramiz (axios orqali)
+  console.log("STEP1: FRAONTEND => BACKEND REST API jo'natadi (axios orqali)");
+  /*
+  Foydalanuvchi inputga reja yozadi =>
+  Button bosiladi =>
+  axios POST so'rov yuboradi =>
+  Server /create-item qabul qiladi va ma'lumot saqlaydi =>
+  Server javob qaytaradi =>
+  Frontend sahifaga yangi item qo'shadi
+  */
   axios
     .post("/create-item", { reja: createField.value })
     .then((response) => {
@@ -49,6 +62,30 @@ document.addEventListener("click", function (e) {
 
     //edit oper
     if (e.target.classList.contains("edit-me")) {
-        alert("siz edit tugmasini bosdingiz");
+       let userInput = prompt("O'zgartirish kiriting",
+         e.target.parentElement.parentElement.querySelector(".item-text").innerHTML
+        );
+    if(userInput) {
+      axios.post("/edit-item", {
+        id: e.target.getAttribute("data-id"),
+        new_input: userInput,
+      })
+        .then((response) => {
+          console.log(response.data);
+          e.target.parentElement.parentElement.querySelector(
+            ".item-text"
+          ).innerHTML = userInput;
+        })
+        .catch((err) => { 
+           console.log("Iltimos qaytadan harakat qiling");
+        });
     }
-})
+  }
+});
+
+document.getElementById("clean-all").addEventListener("click", function() {
+  axios.post("/delete-all", {delete_all: true}).then(response => {
+    alert(response.data.state);
+    document.location.reload();
+  });
+});

@@ -1,57 +1,78 @@
 console.log("train task ishga tushdi!");
 
-// TASK-C
-const moment = require("moment");
 
-class Shop {
-  constructor(non, lagmon, cola) {
-    this.tovarlar = { non, lagmon, cola };
-  }
-
-  getTime() {
-    return moment().format("HH:mm");
-  }
-
-  qoldiq() {
-    const { non, lagmon, cola } = this.tovarlar;
-    console.log(`Hozir ${this.getTime()}da ${non}ta non, ${lagmon}ta lag'mon, ${cola}ta cola bor`);
-  }
-
-  sotish(nomi, soni) {
-    const bor = this.tovarlar[nomi];
-    if (bor == undefined)
-      return console.log(`Hozirda ${nomi} degan mahsulot yo'q.`);
-    if (bor < soni)
-      return console.log(`Hozirda yetarli ${nomi} yo'q. Faqat ${bor}ta bor.`);
-    this.tovarlar[nomi] -= soni;
-    console.log( `${soni}ta ${nomi} sotildi.`);
-  }
-
-  qabul(nomi, soni) {
-    if (this.tovarlar[nomi] == undefined)
-      return console.log(`Hozi:  ${nomi} degan mahsulot yo'q.`);
-    this.tovarlar[nomi] += soni;
-    console.log(`Yana ${soni}ta ${nomi} qabul qilindi.`);
-  }
+//TASK-D
+function checkContent(stax1, stax2) {
+  
+    let xats1 = stax1.split("").sort().join("");
+    let xats2 = stax2.split("").sort().join("");
+    console.log(xats1 === xats2); 
 }
-const shop = new Shop(10, 5, 8);
-shop.qoldiq();
-shop.sotish("non", 8);
-shop.sotish("non", 4);
+    checkContent("mitgroup", "mitgroup");  
 
-shop.qoldiq();
 
-//TASK-A
-// function bambboo(e, element) {
-//   let javob = element.split("");
-//   let javob1 = javob.filter((q) => q === e);
-//   console.log(`${element} ning ichida ${javob1.length} ta ${e} bor`);
+// Ikkita parametra ega function tuzing, va functioning
+// berilgan birinchi va ikkinchi parametr qiymatlari o'zaro to'liq
+// mos kelsa true qiymat qaytarsin
+
+// Masalan: checkContent("mitgroup", "gmtiprou");
+// Yuqoridagi misolda birinchi va ikkinchi parametr qiymatli bir xil
+// ya'ni bir xil harflar qatnashganligi uchun true qiymat qaytaradi.
+
+
+
+// // TASK-C
+// const moment = require("moment");
+
+// class Shop {
+//   constructor(non, lagmon, cola) {
+//     this.tovarlar = { non, lagmon, cola };
+//   }
+
+//   getTime() {
+//     return moment().format("HH:mm");
+//   }
+
+//   qoldiq() {
+//     const { non, lagmon, cola } = this.tovarlar;
+//     console.log(`Hozir ${this.getTime()}da ${non}ta non, ${lagmon}ta lag'mon, ${cola}ta cola bor`);
+//   }
+
+//   sotish(nomi, soni) {
+//     const bor = this.tovarlar[nomi];
+//     if (bor == undefined)
+//       return console.log(`Hozirda ${nomi} degan mahsulot yo'q.`);
+//     if (bor < soni)
+//       return console.log(`Hozirda yetarli ${nomi} yo'q. Faqat ${bor}ta bor.`);
+//     this.tovarlar[nomi] -= soni;
+//     console.log( `${soni}ta ${nomi} sotildi.`);
+//   }
+
+//   qabul(nomi, soni) {
+//     if (this.tovarlar[nomi] == undefined)
+//       return console.log(`Hozi:  ${nomi} degan mahsulot yo'q.`);
+//     this.tovarlar[nomi] += soni;
+//     console.log(`Yana ${soni}ta ${nomi} qabul qilindi.`);
+//   }
 // }
-// bambboo("b", "bambboo");
+// const shop = new Shop(10, 5, 8);
+// shop.qoldiq();
+// shop.sotish("non", 8);
+// shop.sotish("non", 4);
 
-//=====================================================
+// shop.qoldiq();
 
-//TASK-B
+// //TASK-A
+// // function bambboo(e, element) {
+// //   let javob = element.split("");
+// //   let javob1 = javob.filter((q) => q === e);
+// //   console.log(`${element} ning ichida ${javob1.length} ta ${e} bor`);
+// // }
+// // bambboo("b", "bambboo");
+
+// //=====================================================
+
+// //TASK-B
 // function stex(bob) {
 //   console.log(typeof bob);
 //   const result = bob.split("");

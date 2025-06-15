@@ -44,26 +44,44 @@ db.collection("plans").deleteOne({_id: new mongodb.ObjectId(id)}, function(err, 
 })
 });
 
-// app.post("/create-item", (req, res) => {
-//   console.log(req.body);
-//   res.json({ test: "success" });
-// });
+app.post("/edit-item", (req, res) => {
+  const data = req.body;
+  console.log(data);
+  db.collection("plans").findOneAndUpdate(
+    {_id: new mongodb.ObjectId(data.id)},
+    {$set: {reja: data.new_input} },
+    function(err, data) {
+      res.json({state: "success"});
+    });
+});
 
-// app.get("/author", (req, res) => {
-//   res.render("author", { user: user });
-// });
+app.post("/delete-all", (req, res) => {
+  if(req.body.delete_all) {
+    db.collection("plans").deleteMany(function() {
+      res.json({state: "hamma rejalarni o'chirmoqchimisiz?"});
+    });
+  }
+});
+
+
 
 app.get("/", function (req, res) {
-  console.log("user entered /");
+  console.log("STEP1: READ localhost:3000 ga kirdi");
+
+  console.log("STEP2: FRONTEND => BACKEND keldi");
+
+  console.log("STEP3: BACKEND => DB jonadi");
   db.collection("plans")
-    .find()
-    .toArray((err, data) => {
-      if (err) {
-        console.log(err);
-        res.end("somthing went wrong");
-      } else {
+    .find()//plans ni DB da qidiradi
+    .toArray((err, data) => { //array shaklida ma'lumot keladi
+  console.log("STEP4: DBda => BACKEND qaytib keladi, data olib keldi array shaklida");
+      console.log("data:", data); //data => DB dan kelgan ma'lumot
+
+      
+      //reja ni ichiga items nomi bilan data ni beradi (reja.ejs ichini qara).
+      console.log("STEP5: BACKEND => FRONTEND ga javob yuboradi");
         res.render("reja", { items: data });
-      }
+     
     });
 });
 
