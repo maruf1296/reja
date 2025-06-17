@@ -1,14 +1,30 @@
 console.log("train task ishga tushdi!");
 
-
-//TASK-D
-function checkContent(stax1, stax2) {
-  
-    let xats1 = stax1.split("").sort().join("");
-    let xats2 = stax2.split("").sort().join("");
-    console.log(xats1 === xats2); 
+// TASK-E
+function Karon(ini) {
+    const stx = ini.split("").reverse().join(" ");
+    console.log(stx)
 }
-    checkContent("mitgroup", "mitgropu");  
+Karon("Uzbekiston");
+
+
+
+
+/*
+Shunday function tuzing, u bitta string argumentni qabul qilib osha
+stringni teskari qilib return qilsin.
+MASALAN: getReverse("hello") return qilsin "olleh"
+*/
+
+
+ //TASK-D
+// function checkContent(stax1, stax2) {
+  
+//     let xats1 = stax1.split("").sort().join("");
+//     let xats2 = stax2.split("").sort().join("");
+//     console.log(xats1 === xats2); 
+// }
+//     checkContent("mitgroup", "mitgropu");  
 
 
 // Ikkita parametra ega function tuzing, va functioning

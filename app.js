@@ -1,6 +1,6 @@
 console.log("Web Serverni boshlash");
 const express = require("express");
-const app = express();
+const app = express(); //expressning app objecti app orqali server quriladi
 const fs = require("fs");
 
 let user;
@@ -18,32 +18,34 @@ const mongodb = require("mongodb");
 
 //1: Krish kodlari
 app.use(express.static("public"));
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.json()); //kirib kelayotgan json formatdagi data ni objectga o'girib beradi
+app.use(express.urlencoded({ extended: true })); //HTML forumdan keladigan data ni express ga o'qishga yordam beradi u bo'lmasa o'qimedi
 
 //2: Session kodlar
 
 //3: Viewe kodlar
-app.set("views", "views");
-app.set("view engine", "ejs");
+app.set("views", "views");      //backentda frontend yasashda ishlatiladi (Tradishional)
+app.set("view engine", "ejs");  //ejs dan foydalanamiz (folder)
 
 //4: Routing kodlar
-
+//CREATE AIP
 app.post("/create-item", (req, res) => {
   console.log(req.body);
   const new_reja = req.body.reja;
   db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
-   res.json(data.ops[0] );
+   res.json(data.ops[0]);
   });
 });
-
+             //delete-item
+             //DELETA AIP
 app.post("/delete-item", (req, res) => {
 const id = req.body.id;
 db.collection("plans").deleteOne({_id: new mongodb.ObjectId(id)}, function(err, data) {
   res.json({state: "success"});
 })
 });
-
+             //edit-item
+             //EDIT AIP
 app.post("/edit-item", (req, res) => {
   const data = req.body;
   console.log(data);
@@ -54,7 +56,8 @@ app.post("/edit-item", (req, res) => {
       res.json({state: "success"});
     });
 });
-
+                //delete-all
+                //DELETE ALL AIP
 app.post("/delete-all", (req, res) => {
   if(req.body.delete_all) {
     db.collection("plans").deleteMany(function() {

@@ -42,10 +42,9 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
     });
 });
 
-
+     //delete oper
+    // console.log(e.target);
 document.addEventListener("click", function (e) {
-    //delete oper
-    console.log(e.target);
     if (e.target.classList.contains("delete-me")) {
         if(confirm("Anniq ochirmoqchimisiz?")) {
           axios.post("delete-item", {id: e.target.getAttribute("data-id")})
@@ -60,7 +59,7 @@ document.addEventListener("click", function (e) {
     }
         
 
-    //edit oper
+              //edit oper
     if (e.target.classList.contains("edit-me")) {
        let userInput = prompt("O'zgartirish kiriting",
          e.target.parentElement.parentElement.querySelector(".item-text").innerHTML
@@ -82,7 +81,7 @@ document.addEventListener("click", function (e) {
     }
   }
 });
-
+               //delete-all
 document.getElementById("clean-all").addEventListener("click", function() {
   axios.post("/delete-all", {delete_all: true}).then(response => {
     alert(response.data.state);
