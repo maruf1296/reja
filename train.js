@@ -1,13 +1,32 @@
 console.log("train task ishga tushdi!");
 
-// TASK-E
-function Karon(ini) {
-    const stx = ini.split("").reverse().join(" ");
-    console.log(stx)
+//TASK-F
+function KARON(str) {
+  let mar = str.split("");
+  for (let yu = 0; yu < mar.length; yu++) {
+    if (mar.indexOf(mar[yu]) !== yu) {
+      return true;
+    }
+  }
+   return false;
 }
-Karon("Uzbekiston");
+ console.log(KARON("Muzaffar"));
+ 
+/*
+Yagona string argumentga ega findDoublers nomli function tuzing
+Agar stringda bittadan ortiq bir xil harflar ishtirok etgan bo'lsa
+true yokida false natija qaytarsin.
 
+MASALAN: findDoublers("hello"); natija true qaytadi.
+Sababi ikki marotaba takrorlangan 'll' harfi mavjud!
+*/
 
+// // TASK-E
+// function Karon(ini) {
+//     const stx = ini.split("").reverse().join(" ");
+//     console.log(stx)
+// }
+// Karon("Uzbekiston");
 
 
 /*
